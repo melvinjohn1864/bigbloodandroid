@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".donor.DonorActivity">
+
+    <include
+        android:id="@+id/toolbar_donate"
+        layout="@layout/app_bar_with_back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_donate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/darker_gray"/>
+
+    <com.bigb.bigblood.components.CustomTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginLeft="@dimen/_49sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:text="@string/name"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <com.bigb.bigblood.components.CustomEditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginEnd="@dimen/_49sdp"
+        android:inputType="textCapSentences"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14sdp"
+        android:theme="@style/LoginPageEditTextTheme"
+        app:backgroundTint="@android:color/black"
+        app:font_name="AvenirLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <com.bigb.bigblood.components.CustomTextView
+        android:id="@+id/bloodGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginLeft="@dimen/_49sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/bloodGrp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <Spinner
+        android:id="@+id/bloodGrpSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginEnd="@dimen/_49sdp"
+        android:entries="@array/blood_groups"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:background="@drawable/background_spinner"
+        android:popupBackground="@drawable/background_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/bloodGroup"/>
+
+    <com.bigb.bigblood.components.CustomTextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginLeft="@dimen/_49sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/phone"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloodGrpSpinner" />
+
+    <com.bigb.bigblood.components.CustomEditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginEnd="@dimen/_49sdp"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_16sdp"
+        android:theme="@style/LoginPageEditTextTheme"
+        app:backgroundTint="@android:color/black"
+        app:font_name="AvenirLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    <com.bigb.bigblood.components.CustomTextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginLeft="@dimen/_49sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/address"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_phone" />
+
+    <com.bigb.bigblood.components.CustomEditText
+        android:id="@+id/et_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginEnd="@dimen/_49sdp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_16sdp"
+        android:theme="@style/LoginPageEditTextTheme"
+        app:backgroundTint="@android:color/black"
+        android:focusable="false"
+        app:font_name="AvenirLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location" />
+
+    <com.bigb.bigblood.components.CustomTextView
+        android:id="@+id/required_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginLeft="@dimen/_49sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/required_date"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_address" />
+
+    <com.bigb.bigblood.components.CustomEditText
+        android:id="@+id/et_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginEnd="@dimen/_49sdp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_16sdp"
+        android:theme="@style/LoginPageEditTextTheme"
+        app:backgroundTint="@android:color/black"
+        android:focusable="false"
+        app:font_name="AvenirLight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/required_date" />
+
+    <com.bigb.bigblood.components.CustomButton
+        android:id="@+id/donateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_51sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_51sdp"
+        android:background="@drawable/background_bigb_login_button"
+        android:minHeight="40dp"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:text="@string/donate_label"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_24sdp"
+        app:font_name="AvenirBook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_date" />
+
+
+</android.support.constraint.ConstraintLayout>

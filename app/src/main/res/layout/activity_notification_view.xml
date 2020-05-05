@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".donor.DonorActivity">
+
+
+
+
+    <include
+        android:id="@+id/toolbar_donate"
+        layout="@layout/app_bar_with_back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_donate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/darker_gray"/>
+
+
+    <com.bigb.bigblood.components.CustomTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginLeft="@dimen/_49sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:text="@string/name"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <com.bigb.bigblood.components.CustomEditText
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginEnd="@dimen/_49sdp"
+        android:inputType="textCapSentences"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14sdp"
+        android:focusable="false"
+        android:theme="@style/LoginPageEditTextTheme"
+        app:backgroundTint="@android:color/black"
+        app:font_name="AvenirLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <com.bigb.bigblood.components.CustomTextView
+        android:id="@+id/bloodGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginLeft="@dimen/_49sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/bloodGrp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <com.bigb.bigblood.components.CustomEditText
+        android:id="@+id/tv_blood_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginEnd="@dimen/_49sdp"
+        android:inputType="textCapSentences"
+        android:maxLines="1"
+        android:focusable="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14sdp"
+        android:theme="@style/LoginPageEditTextTheme"
+        app:backgroundTint="@android:color/black"
+        app:font_name="AvenirLight"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/bloodGroup"/>
+
+    <com.bigb.bigblood.components.CustomTextView
+        android:id="@+id/required_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginLeft="@dimen/_49sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="@string/required_date"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_blood_group" />
+
+    <com.bigb.bigblood.components.CustomEditText
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_49sdp"
+        android:layout_marginEnd="@dimen/_49sdp"
+        android:inputType="textCapSentences"
+        android:maxLines="1"
+        android:focusable="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_14sdp"
+        android:theme="@style/LoginPageEditTextTheme"
+        app:backgroundTint="@android:color/black"
+        app:font_name="AvenirLight"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/required_date" />
+    <LinearLayout
+        android:id="@+id/bloodCommunicationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp">
+        <LinearLayout
+            android:id="@+id/lt_location_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location_on_black_24dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lt_call_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_call_black_24dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lt_chat_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_message_black_24dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

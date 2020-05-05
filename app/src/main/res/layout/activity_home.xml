@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".home.HomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/default_profile_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/guideline"/>
+
+            <include
+                android:id="@+id/toolbar_home"
+                layout="@layout/app_bar_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.4"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/background_bigb_profile_first_part"
+                app:layout_constraintTop_toTopOf="@id/guideline1"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintEnd_toEndOf="@id/guideline3"
+                app:layout_constraintBottom_toBottomOf="@id/guideline4">
+
+                <com.bigb.bigblood.components.CustomTextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    app:font_name="AvenirHeavy"/>
+
+                <com.bigb.bigblood.components.CustomTextView
+                    android:id="@+id/blood_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:padding="@dimen/_5sdp"
+                    android:textSize="@dimen/_25sdp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/background_bigb_login_button"
+                    app:font_name="AvenirBook"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:background="@drawable/background_bigb_profile_second_part"
+                app:layout_constraintTop_toTopOf="@id/guideline4"
+                app:layout_constraintStart_toStartOf="@id/guideline2"
+                app:layout_constraintEnd_toEndOf="@id/guideline3"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.bigb.bigblood.components.CustomTextView
+                    android:id="@+id/txt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="#181a17"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_gravity="center"
+                    app:font_name="AvenirLight"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#B7B0B0"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+                <com.bigb.bigblood.components.CustomTextView
+                    android:id="@+id/txt_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="#181a17"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_gravity="center"
+                    app:font_name="AvenirLight"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#B7B0B0"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+                <com.bigb.bigblood.components.CustomTextView
+                    android:id="@+id/txt_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:textColor="#181a17"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_gravity="center"
+                    app:font_name="AvenirLight"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.bigb.bigblood.components.CustomButton
+                        android:id="@+id/btn_acceptor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp"
+                        android:text="ACCEPTOR"
+                        android:layout_gravity="left"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/background_bigb_login_button"
+                        app:font_name="AvenirMedium"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="end">
+
+                        <com.bigb.bigblood.components.CustomButton
+                            android:id="@+id/btn_donor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/_18sdp"
+                            android:paddingEnd="@dimen/_18sdp"
+                            android:paddingTop="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_15sdp"
+                            android:text="DONOR"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/background_bigb_login_button"
+                            app:font_name="AvenirMedium"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.28"/>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1"/>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9"/>
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

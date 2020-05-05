@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Bigblood</string>
+    <string name="text_logo">BIG \'B\'</string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core functionality.</string>
+    <string name="permission_settings">Settings</string>
+    <string name="ic_title">WELCOME BIG \'B\'</string>
+    <string name="ic_sign_in">Sign in to continue</string>
+    <string name="username">username</string>
+    <string name="login_username_hint">username</string>
+    <string name="password">password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login_label">LOGIN</string>
+    <string name="bigb_no_account">Dont\'t have account ?</string>
+    <string name="bigb_register">Sign Up</string>
+    <string name="ic_registration_title">Register</string>
+    <string name="ic_sign_up">Sign up to continue</string>
+    <string name="email_id">Email Id</string>
+    <string name="phone">Phone</string>
+    <string name="bloodGrp">Blood Group</string>
+    <string name="address">Address</string>
+    <string name="bigb_account">Allready have account?</string>
+    <string name="bigb_signin">Sign in</string>
+
+    <string name="empty_username">Username cannot be empty!</string>
+    <string name="empty_password">Password cannot be empty!</string>
+    <string name="empty_email">Email Id cannot be empty!</string>
+    <string name="empty_phone">Phone number cannot be empty</string>
+    <string name="empty_bloodgrp">Blood Group cannot be empty!</string>
+    <string name="empty_address">Address cannot be empty!</string>
+    <string name="invalid_password">asswords must be at least 6 characters long</string>
+    <string name="forgot_password_title">Forgot Password?</string>
+    <string name="forgot_password_des">We just need your registered Email Id to sent \n you password reset instructions.</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="register_label">REGISTER</string>
+    <string name="name">Name</string>
+    <string name="donate_label">DONATE</string>
+    <string name="donator_title">DONATE</string>
+    <string name="acceptor_title">Send a Request</string>
+    <string name="send">SEND</string>
+    <string name="donor_message">Your donation interest sent to near by acceptors, You will get a notification when some one needs your blood group.</string>
+    <string name="network_connection_problem">Network Connection Problem</string>
+
+    <string-array name="blood_groups">
+        <item>Choose your blood group</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+
+    <string name="blood_group_prompt">Choose your blood group</string>
+    <string name="acceptor_message">Your blood request has been sent to near by donors and you will be notified when some one accepts your request.</string>
+    <string name="required_date">Required Date</string>
+
+    <string name="logout_alert_message">Are you sure you want to logout?</string>
+</resources>

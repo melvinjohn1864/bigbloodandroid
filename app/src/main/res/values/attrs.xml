@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr name="font_name" format="enum">
+            <enum name="AvenirBook" value="0" />
+            <enum name="AvenirHeavy" value="1" />
+            <enum name="AvenirLight" value="2" />
+            <enum name="AvenirMedium" value="3" />
+            <enum name="AvenirRoman" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+</resources>

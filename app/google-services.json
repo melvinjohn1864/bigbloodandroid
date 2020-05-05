@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "118010355946",
+    "firebase_url": "https://bigb-61a5a.firebaseio.com",
+    "project_id": "bigb-61a5a",
+    "storage_bucket": "bigb-61a5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118010355946:android:9e5dd9687961aaa2",
+        "android_client_info": {
+          "package_name": "com.bigb.bigblood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118010355946-ohloli30467mg94lbp5g4p841ogd287r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk4ZxuNerxQIlnxkROgZ6w2x0IU0-YZfI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
